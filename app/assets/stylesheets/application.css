@@ -1,0 +1,8 @@
+/*
+ *= require_tree .
+ *= require_self
+ *= link application.css
+ */
+
+@import 'bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
