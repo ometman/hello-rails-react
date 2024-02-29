@@ -150,6 +150,9 @@ bash > rails db:migrate
 ```
 bash > rails db:seed
 ````
+```
+bash > npm run build
+````
 
 Run Tests <a name="run-tests"></a>
   To run tests run the following command in your terminal
