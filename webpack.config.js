@@ -1,36 +1,30 @@
-const path    = require("path")
-const webpack = require("webpack")
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
-  mode: "production",
-  devtool: "source-map",
+  mode: "development", // Change mode to development for easier debugging
   entry: {
     application: "./app/javascript/application.js"
   },
   output: {
     filename: "[name].js",
-    sourceMapFilename: "[file].map",
-    chunkFormat: "module",
     path: path.resolve(__dirname, "app/assets/builds"),
   },
-
   module: {
     rules: [
       {
-        test: /\.js$/, // Apply this rule to files ending in .js
-        exclude: /node_modules/, // Don't apply to files residing in node_modules
-        use: {
-          loader: 'babel-loader', // Use the babel-loader module
-          options: {
-            presets: ['@babel/preset-env'] // Set Babel to use @babel/preset-env
-          }
-        }
-      }
-    ]
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Add .jsx if your components have that extension
   },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1
-    })
-  ]
-}
+      maxChunks: 1,
+    }),
+  ],
+};
