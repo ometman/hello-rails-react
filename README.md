@@ -256,6 +256,6 @@ Thanks to Gregoire Vella for the design (https://www.behance.net/gregoirevella)
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./License)License.
+This project is [MIT](./LICENSE) Licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
